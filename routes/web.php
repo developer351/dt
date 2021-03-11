@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/projects', 'ProjectController@index');
+
+Route::get('/datatables-projects', 'DatatableControllers\ProjectController@list')->name('datatables.projects');
+
